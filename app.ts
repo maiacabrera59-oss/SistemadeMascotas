@@ -33,6 +33,11 @@ let selectEspecie = document.querySelector("#especie") as HTMLSelectElement | nu
 
 let inputEdad = document.querySelector("#edad") as HTMLInputElement | null;
 
+let inputRaza = document.querySelector("#raza") as HTMLInputElement | null;
+
+let inputDueño = document.querySelector("#dueño") as HTMLInputElement | null;
+let inputTelefono = document.querySelector("#telefono") as HTMLInputElement | null;
+
 let selectVacunada = document.querySelector("#vacunada") as HTMLSelectElement | null;
 
 let listadoMascotas = document.querySelector("#listadoMascotas") as HTMLDivElement | null;
@@ -80,6 +85,12 @@ function mostrarMascotas(lista: Mascota[]): void {
         <p><strong>Especie:</strong> ${mascota.especie}</p>
 
         <p><strong>Edad:</strong> ${mascota.edad} años</p>
+
+        <p><strong>Raza:</strong> ${mascota.raza}</p>
+
+        <p><strong>Dueño:</strong> ${mascota.dueño}</p>
+
+        <p><strong>Teléfono:</strong> ${mascota.telefono}</p>
 
         <span class="estado ${claseEstado}">${estadoTexto}</span>
 
@@ -143,10 +154,13 @@ if (formulario) {
         let nombre: string = inputNombre.value.trim();
         let especie: string = selectEspecie.value;
         let edad: number = Number(inputEdad.value);
+        let raza: string = inputRaza.value.trim();
+        let dueño: string = inputDueño.value.trim();
+        let telefono: string = inputTelefono.value.trim();
         let vacunada: boolean = selectVacunada.value === "true";
 
-        if (nombre === "" || especie === "" || edad <= 0) {
-            mostrarMensaje("Debe completar todos los datos correctamente.", "error");
+        if (nombre === "" || especie === "" || edad <= 0 || raza === "" || dueño === "" || telefono === "") {
+            mostrarMensaje("Debe completar todos los campos.", "error");
             return;
         }
 
@@ -155,6 +169,9 @@ if (formulario) {
             nombre: nombre,
             especie: especie,
             edad: edad,
+            raza: raza,
+            dueño: dueño,
+            telefono: telefono,
             vacunada: vacunada
         };
 
