@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f5f7;
+  color: #222;
+}
+
+.hero {
+  background: linear-gradient(135deg, #2477b3, #37b37e);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 42px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1100px;
+  margin: 30px auto;
+}
+
+.panel {
+  background-color: white;
+  margin-bottom: 30px;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+}
+
+.panel h2 {
+  text-align: center;
+  color: #2477b3;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formulario label {
+  font-weight: bold;
+}
+
+.formulario input,
+.formulario select {
+  padding: 12px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.formulario button,
+.acciones button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2477b3;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formulario button:hover,
+.acciones button:hover {
+  background-color: #15527d;
+}
+
+.mensaje {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mensaje.ok {
+  color: #16824d;
+}
+
+.mensaje.error {
+  color: #b3261e;
+}
+
+.acciones {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  width: 260px;
+  background-color: #f9fbfd;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.14);
+  transition: 0.3s;
+  border-top: 6px solid #2477b3;
+}
+
+.tarjeta:hover {
+  transform: scale(1.04);
+}
+
+.tarjeta h3 {
+  color: #2477b3;
+}
+
+.estado {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.estado.vacunada {
+  background-color: #d7f7e6;
+  color: #16824d;
+}
+
+.estado.no-vacunada {
+  background-color: #ffe0dc;
+  color: #b3261e;
+}
+
+.resumen p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  background-color: #222;
+  color: white;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .contenedor {
+    width: 95%;
+  }
+
+  .acciones {
+    flex-direction: column;
+  }
+
+  .tarjeta {
+    width: 90%;
+  }
+}
+

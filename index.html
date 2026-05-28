@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Mascotas con TypeScript</title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+<body>
+
+ <header class="hero">
+    <h1>Sistema de Mascotas</h1>
+   <p>Ejemplo educativo con HTML,CSS y TypeScript</p> 
+ </header>
+
+ <main class="contenedor">
+
+    <section class="panel">
+       <h2>Registro de mascotas</h2>
+       <form id="formMascota" class="formulario">
+       <label for="nombre">Nombre de la mascota:</label>
+       <input type="text" id="nombre" placeholder=" ej:firulais">
+
+      <label for="especie">Especie:</label> 
+        <select id="especie">
+            <option value="">Seleccione una especie</option>
+            <option value="perro">Perro</option>
+            <option value="gato">Gato</option>
+            <option value="gato">Ave</option>
+            <option value="pajaro">Otras</option>
+       </select>
+
+         <label for="edad">Edad:</label>
+         <input type="number" id="edad" placeholder=" Ej:3">
+
+         <label for="raza">Raza:</label>
+         <input type="text" id="raza" placeholder=" ej:Labrador">
+
+         <label for="vacunada">¿Está vacunada?</label>
+         <select id="vacunada">
+            <option value="true">Sí</option>
+            <option value="false">No</option>
+         </select>
+         
+           <label for="dueño">Dueño:</label>
+         <input type="text" id="dueño" placeholder=" ej:Juan Pérez">
+
+           <label for="telefono">Teléfono:</label>
+         <input type="number" id="telefono" placeholder=" ej:123456789">
+
+         <button type="submit">Agregar Mascota</button>
+       </form>
+       <p id="mensaje" class="mensaje"></p>
+    </section>
+
+        <section class="panel">
+            <h2>Lista de mascotas</h2>
+            <div class="acciones">
+                <button id="btnMostrarTodas">Mostrar todas</button>
+                <button id="btnMostrarVacunadas">Mostrar Vacunadas</button>
+                <button id="btnMostrarNoVacunadas">Mostrar no Vacunadas</button>
+            </div>
+            <div id="listadoMascotas" class="galeria"> </div>
+        </section>
+        <section class="panel resumen">
+            <h2>Resumen del Sistema</h2>
+            <p id="totalMascotas">Total de mascotas: 0</p>
+            <p id="totalVacunadas">Mascotas vacunadas: 0</p>
+            <p id="totalNoVacunadas">Mascotas no vacunadas: 0</p>
+        </section>
+ </main>
+ <footer> © PII Sistema de mascotas, Cabrera Maia</footer>
+ <script src="/app.js"></script>
+</body>
+</html>
